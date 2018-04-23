@@ -1,4 +1,4 @@
-## Intalling Ipopt and CppAD
+## Installing Ipopt and CppAD
 
 ### Dependencies
 
