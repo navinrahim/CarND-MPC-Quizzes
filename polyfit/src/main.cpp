@@ -1,8 +1,7 @@
 // In this quiz you'll fit a polynomial to waypoints.
 
 #include <iostream>
-#include "Eigen-3.3/Eigen/Core"
-#include "Eigen-3.3/Eigen/QR"
+#include "Dense"
 
 using namespace Eigen;
 
@@ -49,9 +48,14 @@ int main() {
 
   // TODO: use `polyfit` to fit a third order polynomial to the (x, y)
   // coordinates.
+  // Hint: call Eigen::VectorXd polyfit() and pass xvals, yvals, and the 
+  // polynomial degree/order
+  // YOUR CODE HERE
+  Eigen::VectorXd poly = polyfit(xvals,yvals,3);
 
   for (double x = 0; x <= 20; x += 1.0) {
     // TODO: use `polyeval` to evaluate the x values.
+    std::cout << polyeval(poly , x) << std::endl; 
   }
 
   // Expected output
